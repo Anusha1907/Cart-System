@@ -1,0 +1,22 @@
+<div>
+	<h3>Welcome to cart</h3>
+	<button ng-click="logout()">logout</button>
+		<button ui-sref="mycart">My cart</button>
+		<button ui-sref="profile">Profile</button>
+
+	<ol>
+		<li ng-repeat="i in items">
+			Name:{{i.name}}<br>
+			Cost:{{i.cost}}<br>
+			Quantity:<select ng-model="quantity"><option ng-repeat="a in i.numbers">{{a}}</option></select><br>
+			Image:<br><img src="{{i.imagepath}}" alt="{{i.name}}"><br>
+			Status:{{i.status}}<br>
+			<button ng-click="addtocart(i._id,quantity)">Add to Cart</button>
+
+		</li>
+	</ol>
+	
+	Totalcost:<p>{{totalcost}}</p>
+	<!-- Totalquantity:<p>{{totalquantity}}</p> -->
+		
+</div>

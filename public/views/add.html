@@ -1,0 +1,21 @@
+<div>
+    <form name="form" ng-submit="submit()">
+        Item-name
+        <input type="text" ng-model="data.name">
+        <br> Cost
+        <input type="text" ng-model="data.cost">
+        <br> Number
+        <input type="text" ng-model="data.number">
+        <br> Status
+        <select ng-model="data.status">
+            <option>Active</option>
+            <option>Inactive</option>
+        </select>
+        <br> Image
+        <input type="file" name="" nv-file-select uploader="uploader" accept="image/*" /> 
+        <button type="button" ng-click="uploadImage()">Upload</button>
+        <!-- <button type="submit" ng-click="fileupload()" name="data.image">Upload</button><br> -->
+        <button ng-click="add()">ADD</button>
+        <button ng-click="logout()">Logout</button>
+    </form>
+</div>

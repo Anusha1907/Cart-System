@@ -1,0 +1,17 @@
+<div>
+	<!-- <p>Hii</p> -->
+	<ol ng-hide="show()">
+		<li ng-repeat="i in myitems">
+		name:{{i.name}}<br>
+		cost:{{i.cost}}<br>
+		quantity:{{i.quantity}}<button ng-click="change('-',i)">-</button><button ng-click="change('+',i)">+</button><br>
+		Max Quantity:{{i.max}}<br>
+		Image:<br><img src="{{i.imagepath}}"><br>
+
+		<button ng-click="remove(i.id)">Remove</button>
+	</li>
+	</ol>
+	<p ng-hide="show()">Total cost:{{totalcost}}</p>
+	<p ng-hide="show()">Total quantity:{{totalquantity}}</p>
+	<span ng-show="show()">No items selected</span>
+</div>
